@@ -15,21 +15,31 @@
   </head>
   <body>
 
+    <div class="container" role="main">
+
+    <h1>Coronavirus Trends
+      <small class="text-muted">Current data sorted by growth factors</small>
+    </h1>
+
+    <h2>Confirmed Cases</h2>
+
+
 <table 
   data-toggle="table"
-  data-url="data.json"
+  data-url="json/cases.json"
   data-search="true"
-  data-classes="table table-bordered table-hover"
+  data-classes="table table-bordered table-hover table-sm"
+  data-sort-name="average_growth"
+  data-sort-order="desc"
+  data-search-align="left"
+
+data-show-fullscreen="true"
+
   >
   <thead>
     <tr>
-      <th data-sortable="true" data-field="Country/Region">Country</th>
-      <th data-sortable="true" data-field="Province/State">State</th>
-      <th data-sortable="true" data-field="day-6value">d-6</th>
-      <th data-sortable="true" data-field="day-5value">d-5</th>
-      <th data-sortable="true" data-field="day-5growth">%</th>
+      <th data-sortable="true" data-field="Country/Region+Province/State">Country / State</th>
       <th data-sortable="true" data-field="day-4value">d-4</th>
-      <th data-sortable="true" data-field="day-4growth">%</th>
       <th data-sortable="true" data-field="day-3value">d-3</th>
       <th data-sortable="true" data-field="day-3growth">%</th>
       <th data-sortable="true" data-field="day-2value">d-2</th>
@@ -42,6 +52,8 @@
     </tr>
   </thead>
 </table>
+
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha256-WqU1JavFxSAMcLP2WIOI+GB2zWmShMI82mTpLDcqFUg=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

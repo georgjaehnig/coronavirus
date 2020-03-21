@@ -1,3 +1,4 @@
+// Set column headers.
 fetch('json/columns.json')
   .then(response => response.json())
   .then(json => {

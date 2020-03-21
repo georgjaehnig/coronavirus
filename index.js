@@ -56,3 +56,4 @@ function writeData(csvFileName, jsonFileName) {
 }
 
 writeData('COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv', 'public/json/cases.json')
+writeData('COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv', 'public/json/deaths.json')

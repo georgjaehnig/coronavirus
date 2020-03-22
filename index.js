@@ -38,7 +38,6 @@ function writeData(csvFileName, jsonFileName) {
           if (current_growth > 0) {
             current_growth_str += '+'
           }
-          current_growth_str += current_growth.toLocaleString(undefined,{style: 'percent', minimumFractionDigits:0})
           current_growth_str = (current_growth*100).toLocaleString(undefined,{maximumFractionDigits:0})
           row['day' + day + 'growth'] = current_growth_str
         }

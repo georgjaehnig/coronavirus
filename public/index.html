@@ -20,11 +20,21 @@
       <small class="text-muted">Current country data sorted by growth rates</small>
     </h1>
 
-    <p>The table displays numbers of confirmed cases up to that date and their growth rate compared to the previous day. The last column averages the last 4 daily growth rates. Data from <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>, source on <a href="https://github.com/georgjaehnig/coronavirus">Github</a>.</p>
-    <h2>Confirmed Cases</h2>
+    <p>The table displays numbers of cases up to that date and their growth rate compared to the previous day. The last column averages the last 4 daily growth rates. Data from <a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>, source on <a href="https://github.com/georgjaehnig/coronavirus">Github</a>.</p>
+
+
+<ul class="nav nav-tabs justify-content-center">
+  <li class="nav-item cases">
+    <a class="nav-link active" href="javascript:setTab('cases');">Confirmed Cases</a>
+  </li>
+  <li class="nav-item deaths">
+    <a class="nav-link" href="javascript:setTab('deaths');">Deaths</a>
+  </li>
+</ul>
 
 
 <table 
+  id="dataTable"
   data-toggle="table"
   data-url="json/cases.json"
   data-search="true"
@@ -32,9 +42,7 @@
   data-sort-name="average_growth"
   data-sort-order="desc"
   data-search-align="left"
-
-data-show-fullscreen="true"
-
+  data-show-fullscreen="true"
   >
   <thead>
     <tr>

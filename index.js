@@ -34,11 +34,7 @@ function writeData(csvFileName, jsonFileName) {
       if (previous_value > 0) {
         let current_growth = (current_value/previous_value - 1)
         if (current_growth != 0) {
-          let current_growth_str = ''
-          if (current_growth > 0) {
-            current_growth_str += '+'
-          }
-          current_growth_str = (current_growth*100).toLocaleString(undefined,{maximumFractionDigits:0})
+          const current_growth_str = (current_growth*100).toLocaleString(undefined,{maximumFractionDigits:0})
           row['day' + day + 'growth'] = current_growth_str
         }
         sum_growths += current_growth

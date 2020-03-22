@@ -28,6 +28,7 @@ function writeData(csvFileName, jsonFileName) {
   
     let previous_value;
     let sum_growths = 0;
+    //let product_growths = 1;
     let day = -4;
     for (current_value of location.slice(-5)) {
       row['day' + day + 'value'] = current_value.toLocaleString(undefined,{style: 'decimal'})
@@ -38,12 +39,14 @@ function writeData(csvFileName, jsonFileName) {
           row['day' + day + 'growth'] = current_growth_str
         }
         sum_growths += current_growth
+        //product_growths = product_growths * current_growth * 100
       }
       previous_value = current_value
       day++
     }
   
     const average_growth = sum_growths / 4;
+    //const average_growth = Math.pow(product_growths, 1/4)
     row['average_growth'] = (average_growth*100).toLocaleString(undefined,{maximumFractionDigits:0})
     rows.push(row)
   }

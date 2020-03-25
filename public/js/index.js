@@ -1,4 +1,3 @@
-
 function setColumnHeaders() {
   fetch('json/columns.json')
     .then(response => response.json())

@@ -21,7 +21,7 @@ function writeData(csvFileName, jsonFileName) {
     const row = {};
   
     // Location column.
-    row[columns[1] + '+' + [columns[0]]] = location[1] 
+    row['location'] = location[1] 
     if (location[0] != '') {
       row[columns[1] + '+' + [columns[0]]] += ' / ' + location[0]
     }

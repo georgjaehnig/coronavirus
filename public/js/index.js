@@ -25,14 +25,6 @@ function setTab(source) {
   $(".nav .nav-item." + source + " .nav-link").addClass("active");
 }
 
-// Shorthand for $( document ).ready()
-$(function() {
-  setColumnHeaders();
-  $('#ok').click(function () {
-    $('#dataTable').bootstrapTable('refresh')
-  })
-});
-
 function queryParams() {
   var params = {}
   $('#toolbar').find('input[name]').each(function () {
@@ -50,3 +42,10 @@ function responseHandler(rows) {
 
   return rows
 }
+
+$(function() {
+  setColumnHeaders();
+  $('#ok').click(function () {
+    $('#dataTable').bootstrapTable('refresh')
+  })
+});

@@ -28,18 +28,6 @@ function setTab(source) {
 // Shorthand for $( document ).ready()
 $(function() {
   setColumnHeaders();
-
-  /*
-  $('#dataTable').bootstrapTable('filterBy', {
-    'day0value': 36
-  })
-
-  $('#dataTable').bootstrapTable('filterBy', {
-    'day0value': 36
-  })
-*/
-
-
 });
 
 var $table = $('#dataTable')

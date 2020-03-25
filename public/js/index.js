@@ -45,7 +45,7 @@ function responseHandler(rows) {
 
 $(function() {
   setColumnHeaders();
-  $('#ok').click(function () {
+  $('#toolbar [name]').keyup(function () {
     $('#dataTable').bootstrapTable('refresh')
   })
 });

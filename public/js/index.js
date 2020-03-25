@@ -47,6 +47,12 @@ function queryParams() {
   return params
 }
 
-function responseHandler(res) {
-  return res
+function responseHandler(rows) {
+  let location = $('#toolbar input[name=location]').val()
+  rows = rows.filter(row => row.location.toLowerCase().includes(location.toLowerCase()))
+
+  let minCases = $('#toolbar input[name=minCases]').val()
+  rows = rows.filter(row => row['day-4value'] > minCases)
+
+  return rows
 }

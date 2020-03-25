@@ -39,12 +39,26 @@
   </li>
 </ul>
 
+<div id="toolbar">
+  <div class="form-inline" role="form">
+    <div class="form-group">
+      <input name="country" class="form-control" type="text" placeholder="Country">
+    </div>
+    <div class="form-group">
+      <span>Min. cases: </span>
+      <input name="offset" class="form-control" type="number" value="0">
+    </div>
+    <button id="ok" type="submit" class="btn btn-primary">OK</button>
+  </div>
+</div>
 
 <table 
   id="dataTable"
   data-toggle="table"
   data-url="json/cases.json"
-  data-search="true"
+  data-toolbar="#toolbar"
+  data-query-params="queryParams"
+  data-response-handler="responseHandler"
   data-classes="table table-bordered table-hover table-sm"
   data-sort-name="average_growth"
   data-sort-order="desc"

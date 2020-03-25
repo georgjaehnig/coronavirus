@@ -13,8 +13,6 @@ function setColumnHeaders() {
     });
 }
 
-setColumnHeaders();
-
 function setTab(source) {
 
   // Set new source.
@@ -26,3 +24,8 @@ function setTab(source) {
   $(".nav .nav-link").removeClass("active");
   $(".nav .nav-item." + source + " .nav-link").addClass("active");
 }
+
+// Shorthand for $( document ).ready()
+$(function() {
+  setColumnHeaders();
+});

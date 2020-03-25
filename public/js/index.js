@@ -28,16 +28,10 @@ function setTab(source) {
 // Shorthand for $( document ).ready()
 $(function() {
   setColumnHeaders();
-});
-
-var $table = $('#dataTable')
-var $ok = $('#ok')
-
-$(function() {
-  $ok.click(function () {
-    $table.bootstrapTable('refresh')
+  $('#ok').click(function () {
+    $('#dataTable').bootstrapTable('refresh')
   })
-})
+});
 
 function queryParams() {
   var params = {}

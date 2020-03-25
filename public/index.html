@@ -42,11 +42,13 @@
 <div id="toolbar">
   <div class="form-inline" role="form">
     <div class="form-group">
-      <input name="country" class="form-control" type="text" placeholder="Country">
+      <input name="location" class="form-control mr-sm-2" type="text" placeholder="Country">
     </div>
-    <div class="form-group">
-      <span>Min. cases: </span>
-      <input name="offset" class="form-control" type="number" value="0">
+    <div class="input-group mr-sm-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">Min. cases 4 days ago:</div>
+      </div>
+      <input name="minCases" class="form-control" type="number" value="20">
     </div>
     <button id="ok" type="submit" class="btn btn-primary">OK</button>
   </div>

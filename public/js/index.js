@@ -60,5 +60,5 @@ function queryParams() {
 }
 
 function responseHandler(res) {
-  //return res
+  return res
 }

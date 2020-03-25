@@ -23,7 +23,7 @@ function writeData(csvFileName, jsonFileName) {
     // Location column.
     row['location'] = location[1] 
     if (location[0] != '') {
-      row[columns[1] + '+' + [columns[0]]] += ' / ' + location[0]
+      row['location'] += ' / ' + location[0]
     }
   
     let previous_value;

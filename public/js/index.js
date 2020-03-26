@@ -7,7 +7,7 @@ function setColumnHeaders() {
         let date = json[json.length + i -1]
   
         // Remove year from date.
-        date = date.replace(/\/20$/, '')
+        date = date.replace(/\/2020$/, '')
         document.querySelector('th[data-field="day' + i + 'value"] .th-inner').innerHTML = date;
       }
     });
